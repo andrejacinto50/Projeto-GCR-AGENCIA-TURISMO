@@ -30,28 +30,28 @@ const credibilidadeStats = [
 const porqueEscolher = [
   {
     icon: MapPin,
-    title: 'Guias nativos',
-    description: 'Atendimento feito por quem vive a região e conhece detalhes que não aparecem em roteiros comuns.',
+    title: 'Profissionais Nativos ',
+    description: 'Atendimento feito por quem nasceu e cresceu aqui e conhece cada detalhe que não aparece em roteiros comuns e fogem do óbvio. ',
   },
   {
     icon: ShieldCheck,
     title: 'Segurança em primeiro lugar',
-    description: 'Passeios orientados com cuidado, responsabilidade e informações claras antes da experiência.',
+    description: 'Passeios conduzidos por profissionais habilitados. Orientados com cuidado, responsabilidade e informações claras antes de cada experiência.',
   },
   {
     icon: Sparkles,
-    title: 'Mais de 15 anos de história',
-    description: `A GCR atua há mais de ${site.anosDeAtuacao} anos divulgando os atrativos turísticos da cidade.`,
+    title: 'Mais de 16 anos de história',
+    description: `A GCR Guia Turístico atua há mais de ${site.anosDeAtuacao} anos divulgando os atrativos turísticos da cidade, sendo a pioneira em promover o turismo de Governador Celso Ramos nas redes sociais `,
   },
   {
     icon: ShieldCheck,
-    title: 'Credenciamento Cadastur',
-    description: 'Mais confiança para quem busca uma empresa regularizada e preparada para receber visitantes.',
+    title: 'Somos Credenciados (CADASTUR)',
+    description: 'Possuímos o Cadastur, certificado dado pelo ministério do turismo e que garante a legalidade de atuação .Mais confiança para quem busca uma empresa regularizada e preparada para receber visitantes.',
   },
   {
     icon: Sparkles,
-    title: 'Roteiros personalizados',
-    description: 'Opções para famílias, casais, grupos de amigos, aventureiros e visitantes que querem algo especial.',
+    title: 'Guia de Turismo legalizado',
+    description: 'Nós possuímos o único guia de turismo da cidade com formação técnica na área e com certificado CADASTUR, que possui autorização para atuar legalmente na cidade. Não coloque a sua vida ou a de quem você ama em risco com outros “profissionais” ilegais, exija que mostrem o Cadastur de Guia.',
   },
   {
     icon: MessageCircle,
@@ -100,13 +100,21 @@ useEffect(() => {
     <>
       <Hero
         eyebrow={site.cidade}
-        title={site.slogan}
-        subtitle="Empresa criada por nativos, com mais de 15 anos divulgando os atrativos turísticos de Governador Celso Ramos. Passeios de lancha, escuna, trilhas, parapente e experiências personalizadas para quem quer conhecer a região com segurança e autenticidade."
+      title={
+    <>
+      {site.slogan}
+      <br/>
+    <span className="hero-title-gold">
+        Viva essa experiência!
+      </span>
+    </>
+  }
+        subtitle="Criada por nativos de Governador Celso Ramos e atuando há mais de 16 anos na divulgação dos principais atrativos turísticos da região. A GCR Guia Turístico nasceu com o propósito de proporcionar experiências personalizadas e inesquecíveis, para que você conheça cada destino com segurança, autenticidade e o acolhimento de quem realmente nasceu e vive aqui."
         floating={[
-          { value: `${site.anosDeAtuacao}+`, label: 'Anos' },
-          { value: 'Cadastur', label: 'Credenciado' },
-          { value: 'Local', label: 'Guias nativos' },
-          { value: '8', label: 'Experiências' },
+          { value: `${site.anosDeAtuacao}+`, label: 'Mais de 16 anos divulgando a cidade' },
+          { value: 'Cadastur', label: 'Empresa Credenciada no Ministério do Turismo ' },
+          { value: 'Profissionais ', label: 'Possuímos o único guia da cidade credenciado ' },
+          { value: '8', label: 'Diversas opções de passeios para você aproveitar' },
         ]}
       >
         <Link to="/passeios" className="btn-premium">
@@ -131,8 +139,8 @@ useEffect(() => {
             <div className="home-section-head">
               <SectionTitle
                 eyebrow="Experiências em destaque"
-                title="Os passeios mais procurados em GCR"
-                description="Experiências pensadas para quem quer explorar Governador Celso Ramos com segurança, beleza natural e atendimento direto com guias locais."
+                title="Os passeios mais desejados de Governador Celso Ramos estão na GCR Guia Turístico "
+                description="Transforme sua viagem em uma experiência única. Explore as belezas de Governador Celso Ramos com segurança, conforto e acompanhamento de profissionais legalizados que conhecem cada detalhe para tornar seu passeio inesquecível."
                 light
               />
 
@@ -165,8 +173,9 @@ useEffect(() => {
           <Reveal>
             <SectionTitle
               eyebrow="Descubra GCR"
-              title="Praias, fortaleza, ilhas e trilhas a poucos minutos umas das outras"
-              description="Governador Celso Ramos reúne natureza, mar cristalino, história e paisagens que tornam cada passeio uma experiência única."
+              title="Governador Celso Ramos, uma das mais belas regiões de Santa Catarina!"
+              description="Aqui, você encontra ilhas paradisíacas, fortalezas e Igrejas históricas, praias premiaras internacionalmente, além de inúmeros mirantes e trilhas cercadas pela Mata Atlântica. 
+          Um destino completo para quem busca natureza, aventura, cultura e momentos inesquecíveis."
               light
             />
           </Reveal>
@@ -189,9 +198,10 @@ useEffect(() => {
   <div className="home-container">
     <Reveal>
       <div className="home-why-heading">
-        <span>Por que escolher a GCR</span>
+        <span>Por que escolher a GCR Guia Turístico</span>
 
-        <h2>Experiência local, segurança e atendimento próximo</h2>
+        <h2>Conhecimento local, que transforma sua viagem.
+A segurança e legalidade que você busca estão aqui! </h2>
 
         <div className="home-why-line" />
       </div>

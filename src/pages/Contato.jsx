@@ -25,7 +25,7 @@ export default function Contato() {
       <Hero
         size="small"
         eyebrow="Contato"
-        title="Fale diretamente com a GCR"
+        title="Fale diretamente com a GCR Guia Turístico"
         subtitle="Tire dúvidas, consulte disponibilidade e receba orientação para escolher o passeio ideal em Governador Celso Ramos."
       />
 

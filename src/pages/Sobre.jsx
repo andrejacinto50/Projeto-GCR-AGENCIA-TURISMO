@@ -2,6 +2,8 @@ import Hero from '../components/Hero'
 import Reveal from '../components/Reveal'
 import CTA from '../components/CTA'
 import { site } from '../data/site'
+import { Sailboat, Route, Wind, MessageCircle } from 'lucide-react'
+import cadasturLogo from '../assets/cadastur.png'
 
 const valores = [
   {
@@ -17,7 +19,7 @@ const valores = [
   {
     title: 'Respeito ao ambiente',
     description:
-      'Valorizamos as praias, ilhas, trilhas e comunidades locais que tornam a cidade tão especial.',
+      'Cuidamos e valorizamos o meio ambiente, trilhas, praias, cachoeiras, mar e comunidades locais que tornam a cidade e as experiências tão inesquecíveis.',
   },
   {
     title: 'Atendimento próximo',
@@ -27,10 +29,26 @@ const valores = [
 ]
 
 const equipe = [
-  { nome: 'Guias de mar', papel: 'Lancha, escuna, pesca e banana boat' },
-  { nome: 'Guias de trilha', papel: 'Trilhas guiadas e city tour' },
-  { nome: 'Equipe de aventura', papel: 'Parapente, buggy e experiências radicais' },
-  { nome: 'Atendimento', papel: 'Reservas, dúvidas e suporte pelo WhatsApp' },
+  {
+    icon: Sailboat,
+    nome: 'Capitão, Piloto e Marinheiros',
+    papel: 'Lancha, escuna, pesca e banana boat',
+  },
+  {
+    icon: Route,
+    nome: 'Guias de trilha',
+    papel: 'Trilhas guiadas e city tour',
+  },
+  {
+    icon: Wind,
+    nome: 'Equipe de aventura',
+    papel: 'Parapente, buggy e experiências radicais',
+  },
+  {
+    icon: MessageCircle,
+    nome: 'Atendimento',
+    papel: 'Reservas, dúvidas e suporte pelo WhatsApp',
+  },
 ]
 
 const timeline = [
@@ -45,9 +63,9 @@ export default function Sobre() {
     <>
       <Hero
         size="small"
-        eyebrow="Sobre a GCR"
-        title="Turismo feito por quem nasceu e vive Governador Celso Ramos"
-        subtitle={`Há mais de ${site.anosDeAtuacao} anos, a GCR apresenta os atrativos turísticos da cidade com olhar local, atendimento próximo e experiências pensadas para cada visitante.`}
+        eyebrow="Sobre a GCR Guia Turístico "
+        title="Turismo feito por quem nasceu e vive Governador Celso Ramos na veia."
+        subtitle={`Há mais de ${site.anosDeAtuacao} anos conectando visitantes às melhores experiências da região. A confiança de quem conhece cada detalhe da cidade, para que sua viagem seja vivida com segurança, autenticidade e momentos inesquecíveis você encontra aqui!`}
       />
 
       <main className="about-premium-page">
@@ -60,25 +78,20 @@ export default function Sobre() {
                 <h2>Uma empresa criada por nativos.</h2>
 
                 <p>
-                  A GCR nasceu para mostrar Governador Celso Ramos além do óbvio:
-                  praias, trilhas, ilhas, mirantes, roteiros de mar e experiências
-                  que ganham mais valor quando são conduzidas por quem conhece a região.
+                  Criada por amigos nativos e apaixonados por Governador Celso Ramos, a GCR Guia Turístico nasce da carência da valorização do potencial turístico da cidade que não era explorado. Assim resolveram divulgar aquilo que a cidade tem de melhor a oferecer e ser um Guia para quem quer conhecer a cidade. 
+Desta forma além de pioneiros nas redes sociais  com milhares de seguidores se tornamos referência e autoridade no setor turístico/digital da cidade.
                 </p>
               </div>
 
               <div className="about-story-text">
                 <p>
-                  Ao longo dos anos, a empresa passou a reunir diferentes formas de viver
-                  a cidade: passeios de lancha, escuna, trilhas guiadas, parapente, buggy,
-                  pesca embarcada, city tour e outras experiências para visitantes que buscam
-                  contato real com a natureza.
+                 A GCR Guia Turístico nasceu para mostrar Governador Celso
+Ramos tem de melhor: praias, trilhas, cultura, história, gastronomia, mirantes, roteiros e experiências que ganham mais valor quando são conduzidas por quem conhece a região.
                 </p>
-
                 <p>
-                  O objetivo é que cada visitante se sinta bem orientado desde o primeiro
-                  contato, com informações claras, segurança e a sensação de estar conhecendo
-                  GCR com alguém da própria cidade.
+                 O objetivo é que cada visitante se sinta bem orientado desde o primeiro contato, com informações claras, segurança e a sensação de estar conhecendo Governador Celso Ramos com alguém da própria cidade.
                 </p>
+                <p></p>
               </div>
             </Reveal>
 
@@ -89,7 +102,7 @@ export default function Sobre() {
                 <h3>Transformar passeios em experiências memoráveis.</h3>
 
                 <p>
-                  Mais do que vender roteiros, a GCR conecta visitantes com lugares,
+                  Mais do que vender roteiros, a GCR Guia Turístico conecta visitantes com lugares,
                   histórias, paisagens e momentos que fazem Governador Celso Ramos ser
                   lembrada depois da viagem.
                 </p>
@@ -101,8 +114,8 @@ export default function Sobre() {
                   </div>
 
                   <div>
-                    <strong>GCR</strong>
-                    <small>guias nativos</small>
+                    <strong>Cadastur</strong>
+                    <small>Único Guia Nativo credenciado da cidade</small>
                   </div>
                 </div>
               </aside>
@@ -172,37 +185,49 @@ export default function Sobre() {
               </div>
             </Reveal>
 
-            <div className="about-team-grid">
-              {equipe.map((pessoa, index) => (
-                <Reveal key={pessoa.nome} delay={index * 70}>
-                  <article className="about-team-card">
-                    <div className="about-team-avatar">
-                      {pessoa.nome.charAt(0)}
-                    </div>
+         <div className="about-team-grid">
+  {equipe.map((pessoa, index) => {
+    const Icon = pessoa.icon
 
-                    <h3>{pessoa.nome}</h3>
-                    <p>{pessoa.papel}</p>
-                  </article>
-                </Reveal>
-              ))}
-            </div>
+    return (
+      <Reveal key={pessoa.nome} delay={index * 70}>
+        <article className="about-team-card">
+          <div className="about-team-avatar" aria-hidden="true">
+            <Icon size={32} strokeWidth={2.4} />
+          </div>
+
+          <h3>{pessoa.nome}</h3>
+          <p>{pessoa.papel}</p>
+        </article>
+      </Reveal>
+    )
+  })}
+</div>
           </div>
         </section>
 
         <section className="about-cadastur-section px-5 py-20 sm:px-8">
-          <Reveal>
-            <div className="about-cadastur-card">
-              <span>Cadastur</span>
+  <Reveal>
+    <div className="about-cadastur-card">
+      <span>Cadastur</span>
 
-              <h2>Turismo com regularização, segurança e responsabilidade.</h2>
+      <h2>Turismo com regularização, segurança e responsabilidade.</h2>
 
-              <p>
-                A GCR atua com guia credenciado e estrutura preparada para receber visitantes
-                em experiências turísticas em Governador Celso Ramos.
-              </p>
-            </div>
-          </Reveal>
-        </section>
+      <p>
+        A GCR Guia Turístico e parceiros possuem o CADASTUR, certificado emitido e exigido pelo ministério do turismo, que garante que as empresas atuam de forma legal. 
+Além de termos também o único guia de turismo formado e credenciado da cidade com autorização para realizar trilhas legalmente.
+      </p>
+
+      <div className="about-cadastur-logo-wrap">
+        <img
+          src={cadasturLogo}
+          alt="Cadastur"
+          className="about-cadastur-logo"
+        />
+      </div>
+    </div>
+  </Reveal>
+</section>
       </main>
 
       <CTA />

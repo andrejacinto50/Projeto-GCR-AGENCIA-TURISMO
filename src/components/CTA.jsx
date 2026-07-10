@@ -3,8 +3,8 @@ import WhatsAppButton from './WhatsAppButton'
 import { mensagemGenerica } from '../utils/whatsapp'
 
 export default function CTA({
-  title = 'Pronto para conhecer Governador Celso Ramos?',
-  subtitle = 'Fale agora com um guia local e monte o roteiro perfeito para o seu grupo.',
+  title = 'Pronto para viver o melhor de Governador Celso Ramos?',
+  subtitle = 'Fale agora com a nossa equipe e monte o roteiro perfeito para você e seu grupo.',
   mensagem,
 }) {
   return (

@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom'
 import { navLinks, site } from '../data/site'
 import { passeios } from '../data/passeios'
 import logo from '../assets/logo.png'
+import cadasturLogo from '../assets/cadastur.png'
+import { buildWhatsAppLink } from '../utils/whatsapp'
 
 export default function Footer() {
   const ano = new Date().getFullYear()
@@ -25,13 +27,21 @@ export default function Footer() {
             </div>
 
             <p>
-              Guia local em Governador Celso Ramos para passeios, experiências
-              e roteiros com orientação próxima.
+              Guia Nativo de Governador Celso Ramos-SC com mais de 15 anos de experiência. Passeios, experiências e roteiros com orientação personalizada. 
             </p>
 
-            <span className="footer-cadastur">
-              Cadastur {site.cadastur}
-            </span>
+            <div className="cadastur-wrap">
+  <div className="cadastur-info">
+    <span className="cadastur-badge">Guia Vinícius</span>
+    <span className="cadastur-badge">CADASTUR {site.cadastur}</span>
+  </div>
+
+  <img
+    src={cadasturLogo}
+    alt="Cadastur"
+    className="cadastur-logo"
+  />
+</div>
           </div>
 
           <div className="footer-premium-cta">
@@ -80,23 +90,63 @@ export default function Footer() {
 
             <ul>
               <li>{site.cidade}</li>
-              <li>
-                <a href={`mailto:${site.email}`}>
-                  {site.email}
-                </a>
-              </li>
+ <li>
+  <a
+    href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+      site.email
+    )}&su=${encodeURIComponent(
+      'Contato pelo site GCR Guia Turístico'
+    )}&body=${encodeURIComponent(
+      `Olá, equipe GCR Guia Turístico!
+
+Vim pelo site e gostaria de saber mais informações sobre os passeios em Governador Celso Ramos.
+
+Meu nome:
+Meu WhatsApp:
+Passeio de interesse:
+Data desejada:
+Quantidade de pessoas:
+
+Aguardo o retorno.`
+    )}`}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="footer-email-link"
+  >
+    E-mail: {site.email}
+  </a>
+</li>
               <li>
                 <a
                   href={site.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Instagram
+                  Instagram: gcrguiaturistico
                 </a>
               </li>
+<li>
+  <a
+    href={buildWhatsAppLink('Olá! Vim pelo site da GCR Guia Turístico e gostaria de falar pelo WhatsApp.')}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="footer-whatsapp-link"
+  >
+    WhatsApp: (48) 99201-3033
+  </a>
+</li>
             </ul>
           </div>
         </div>
+<div className="footer-brand-strip">
+  <img src={logo} alt="GCR Guia Turístico" className="footer-brand-logo" />
+
+  <div>
+    <strong>GCR Guia Turístico</strong>
+    <span>Governador Celso Ramos, SC</span>
+  </div>
+</div>
+
 
         <div className="footer-premium-bottom">
           <p>
@@ -105,6 +155,10 @@ export default function Footer() {
 
           <span>
             Turismo local, natureza e experiências em Governador Celso Ramos.
+          </span>
+
+          <span>
+            Desenvolvido por AJ Digital
           </span>
         </div>
       </div>

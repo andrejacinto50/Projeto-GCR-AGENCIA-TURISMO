@@ -7,7 +7,7 @@ export default function ContactCard() {
     { icon: MapPin, label: 'Cidade', value: site.cidade },
     { icon: Mail, label: 'E-mail', value: site.email },
     { icon: Globe, label: 'Instagram', value: '@gcrguiaturistico', href: site.instagram },
-    { icon: ShieldCheck, label: 'Cadastur', value: 'Guia credenciado' },
+    { icon: ShieldCheck, label: 'Cadastur', value: '51.891.899/0001-10' },
   ]
 
   const whatsappLink = buildWhatsAppLink(
@@ -26,7 +26,7 @@ export default function ContactCard() {
           </span>
 
           <h3 className="mt-4 font-display text-3xl font-semibold leading-tight">
-            Fale com a GCR
+            Fale com a GCR Guia Turístico
           </h3>
 
           <p className="mt-3 text-sm leading-relaxed text-white/75">

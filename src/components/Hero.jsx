@@ -1,4 +1,4 @@
-import heroImage from '../assets/fotobaia.jpeg'
+import heroImage from '../assets/heroImage.png'
 
 export default function Hero({ eyebrow, title, subtitle, children, floating, size = 'large' }) {
   return (
