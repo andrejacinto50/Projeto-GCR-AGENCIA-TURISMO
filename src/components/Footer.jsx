@@ -27,7 +27,7 @@ export default function Footer() {
             </div>
 
             <p>
-              Guia Nativo de Governador Celso Ramos-SC com mais de 15 anos de experiência. Passeios, experiências e roteiros com orientação personalizada. 
+              Guia Nativo de Governador Celso Ramos-SC com mais de 16 anos de experiência. Passeios, experiências e roteiros com orientação personalizada. 
             </p>
 
             <div className="cadastur-wrap">
