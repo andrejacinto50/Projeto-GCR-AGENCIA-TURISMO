@@ -2,8 +2,11 @@ import { Link } from 'react-router-dom'
 import { navLinks, site } from '../data/site'
 import { passeios } from '../data/passeios'
 import logo from '../assets/logo.png'
+import logoV from '../assets/logoV.png'
 import cadasturLogo from '../assets/cadastur.png'
 import { buildWhatsAppLink } from '../utils/whatsapp'
+import cadasturFundo from '../assets/CadasturFundo.jpg'
+
 
 export default function Footer() {
   const ano = new Date().getFullYear()
@@ -37,7 +40,7 @@ export default function Footer() {
   </div>
 
   <img
-    src={cadasturLogo}
+    src={cadasturFundo}
     alt="Cadastur"
     className="cadastur-logo"
   />
@@ -138,15 +141,15 @@ Aguardo o retorno.`
             </ul>
           </div>
         </div>
-<div className="footer-brand-strip">
-  <img src={logo} alt="GCR Guia Turístico" className="footer-brand-logo" />
+<div className="footer-brand-signature">
+  <img
+    src={logoV}
+    alt="GCR Guia Turístico"
+    className="footer-brand-signature-logo"
+  />
 
-  <div>
-    <strong>GCR Guia Turístico</strong>
-    <span>Governador Celso Ramos, SC</span>
-  </div>
+  <span>Governador Celso Ramos, SC</span>
 </div>
-
 
         <div className="footer-premium-bottom">
           <p>

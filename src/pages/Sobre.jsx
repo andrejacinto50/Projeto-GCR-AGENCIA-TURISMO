@@ -4,6 +4,7 @@ import CTA from '../components/CTA'
 import { site } from '../data/site'
 import { Sailboat, Route, Wind, MessageCircle } from 'lucide-react'
 import cadasturLogo from '../assets/cadastur.png'
+import cadasturFundo from '../assets/CadasturFundo.jpg'
 
 const valores = [
   {
@@ -78,20 +79,20 @@ export default function Sobre() {
                 <h2>Uma empresa criada por nativos.</h2>
 
                 <p>
-                  Criada por amigos nativos e apaixonados por Governador Celso Ramos, a GCR Guia Turístico nasce da carência da valorização do potencial turístico da cidade que não era explorado. Assim resolveram divulgar aquilo que a cidade tem de melhor a oferecer e ser um Guia para quem quer conhecer a cidade. 
-Desta forma além de pioneiros nas redes sociais  com milhares de seguidores se tornamos referência e autoridade no setor turístico/digital da cidade.
+                  Criada por amigos nativos e apaixonados por Governador Celso Ramos, a GCR Guia
+Turístico nasce da carência da valorização do potencial turístico da cidade que não era explorado. Assim resolveram divulgar os atrativos da cidade e ser de fato um Guia para quem deseja conhecer a cidade.
+Desta forma além de pioneiros nas redes sociais com milhares de seguidores, se tornamos também referência e autoridade no setor turístico/digital da cidade.
                 </p>
               </div>
 
               <div className="about-story-text">
                 <p>
-                 A GCR Guia Turístico nasceu para mostrar Governador Celso
-Ramos tem de melhor: praias, trilhas, cultura, história, gastronomia, mirantes, roteiros e experiências que ganham mais valor quando são conduzidas por quem conhece a região.
+                 A GCR Guia Turístico nasceu para mostrar aquilo que
+Governador Celso Ramos tem de melhor; praias, trilhas, cultura, história, gastronomia, mirantes, roteiros e experiências que ganham mais valor quando são conduzidas por quem conhece a região.
                 </p>
                 <p>
                  O objetivo é que cada visitante se sinta bem orientado desde o primeiro contato, com informações claras, segurança e a sensação de estar conhecendo Governador Celso Ramos com alguém da própria cidade.
-                </p>
-                <p></p>
+               </p>
               </div>
             </Reveal>
 
@@ -219,11 +220,11 @@ Além de termos também o único guia de turismo formado e credenciado da cidade
       </p>
 
       <div className="about-cadastur-logo-wrap">
-        <img
-          src={cadasturLogo}
-          alt="Cadastur"
-          className="about-cadastur-logo"
-        />
+       <img
+           src={cadasturFundo}
+           alt="Cadastur"
+           className="cadastur-logo"
+         />
       </div>
     </div>
   </Reveal>

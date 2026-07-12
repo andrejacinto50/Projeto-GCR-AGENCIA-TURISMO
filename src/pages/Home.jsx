@@ -24,7 +24,7 @@ const credibilidadeStats = [
   { value: `${site.anosDeAtuacao}+`, label: 'Anos de experiência' },
   { value: 'Cadastur', label: 'Guia credenciado' },
   { value: '100%', label: 'Nativos de GCR' },
-  { value: '8', label: 'Experiências' },
+ { value: '∞', label: 'Experiências',className: 'credibility-stat-infinity' },
 ]
 
 const porqueEscolher = [
@@ -66,7 +66,7 @@ const comoFunciona = [
     description: 'Explore os passeios, veja o estilo de cada roteiro e escolha o que combina melhor com seu grupo.',
   },
   {
-    title: 'Fale com a GCR',
+    title: 'Fale com a GCR Guia Turístico',
     description: 'Confirme datas, valores, horários e detalhes diretamente pelo WhatsApp com atendimento personalizado.',
   },
   {
@@ -114,7 +114,7 @@ useEffect(() => {
           { value: `${site.anosDeAtuacao}+`, label: 'Mais de 16 anos divulgando a cidade' },
           { value: 'Cadastur', label: 'Empresa Credenciada no Ministério do Turismo ' },
           { value: 'Profissionais ', label: 'Possuímos o único guia da cidade credenciado ' },
-          { value: '8', label: 'Diversas opções de passeios para você aproveitar' },
+          { value: 'Viva GCR', label: 'Diversas opções de passeios para você aproveitar' },
         ]}
       >
         <Link to="/passeios" className="btn-premium">
@@ -174,7 +174,7 @@ useEffect(() => {
             <SectionTitle
               eyebrow="Descubra GCR"
               title="Governador Celso Ramos, uma das mais belas regiões de Santa Catarina!"
-              description="Aqui, você encontra ilhas paradisíacas, fortalezas e Igrejas históricas, praias premiaras internacionalmente, além de inúmeros mirantes e trilhas cercadas pela Mata Atlântica. 
+              description="Aqui, você encontra ilhas paradisíacas, fortalezas e Igrejas históricas, praias premiadas internacionalmente, além de inúmeros mirantes e trilhas cercadas pela Mata Atlântica. 
           Um destino completo para quem busca natureza, aventura, cultura e momentos inesquecíveis."
               light
             />
@@ -281,7 +281,7 @@ A segurança e legalidade que você busca estão aqui! </h2>
 
         <span>
           Antes do passeio você recebe todas as orientações, localização,
-          recomendações e suporte diretamente com a equipe da GCR.
+          recomendações e suporte diretamente com a equipe da GCR Guia Turístico.
         </span>
       </div>
     </Reveal>
@@ -294,8 +294,8 @@ A segurança e legalidade que você busca estão aqui! </h2>
       <Reveal>
         <SectionTitle
           eyebrow="Avaliações reais"
-          title="O que dizem sobre a GCR no Google"
-          description="Relatos de visitantes que escolheram a GCR para viver passeios, trilhas, experiências de mar e aventura em Governador Celso Ramos."
+          title="O que dizem sobre a GCR Guia Turístico no Google"
+          description="Relatos de visitantes que escolheram a GCR Guia Turiístico para viver passeios, trilhas, experiências de mar e aventura em Governador Celso Ramos."
           light
         />
       </Reveal>
