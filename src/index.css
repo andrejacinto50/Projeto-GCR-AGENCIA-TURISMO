@@ -6286,3 +6286,25 @@ Footer Email fixo
   object-fit: cover;
   object-position: center;
 }
+
+
+/* Mantém os links da coluna Passeios acima de outras camadas do footer e libera todos os cliques */
+
+.footer-premium-grid {
+  position: relative;
+  z-index: 5;
+}
+
+.footer-premium-grid > div:nth-child(2),
+.footer-premium-grid > div:nth-child(2) ul,
+.footer-premium-grid > div:nth-child(2) li,
+.footer-premium-grid > div:nth-child(2) a {
+  position: relative;
+  pointer-events: auto;
+}
+
+.footer-premium-grid > div:nth-child(2) a {
+  z-index: 6;
+  display: inline-block;
+}
+
