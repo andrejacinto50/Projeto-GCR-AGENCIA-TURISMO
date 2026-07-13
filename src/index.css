@@ -6308,3 +6308,13 @@ Footer Email fixo
   display: inline-block;
 }
 
+/* Ajusta o formulário quando o campo de data não é necessário */
+.builder-form-without-date {
+  grid-template-columns: minmax(0, 1fr) minmax(150px, 0.35fr);
+}
+
+@media (max-width: 760px) {
+  .builder-form-without-date {
+    grid-template-columns: 1fr;
+  }
+}
