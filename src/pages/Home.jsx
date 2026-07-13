@@ -295,7 +295,7 @@ A segurança e legalidade que você busca estão aqui! </h2>
         <SectionTitle
           eyebrow="Avaliações reais"
           title="O que dizem sobre a GCR Guia Turístico no Google"
-          description="Relatos de visitantes que escolheram a GCR Guia Turiístico para viver passeios, trilhas, experiências de mar e aventura em Governador Celso Ramos."
+          description="Relatos de visitantes que escolheram a GCR Guia Turístico para viver passeios, trilhas, experiências de mar e aventura em Governador Celso Ramos."
           light
         />
       </Reveal>
